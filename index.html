@@ -1,26 +1,108 @@
-<!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Food Ninja</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body class="grey lighten-4">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-
-    <div class="container">
-      <h1>Awesome PWA App</h1>
-
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="/">Food<span>Ninja</span></a>
+      <span class="right grey-text text-darken-1">
+        <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
     </div>
+  </nav>
 
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">FOODNINJA</a></li>
+    <li><a href="/" class="waves-effect">Home</a></li>
+    <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="/pages/contact.html" class="waves-effect">
+      <i class="material-icons">mail_outline</i>Contact</a>
+    </li>
+  </ul>
+
+  <!-- recipes -->
+  <div class="recipes container grey-text text-darken-1">
+    <div class="card-panel recipe white row">
+      <img src="/img/dish.png" alt="recipe thumb">
+      <div class="recipe-details">
+        <div class="recipe-title">Edame Noodles</div>
+        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
+      </div>
+      <div class="recipe-delete">
+        <i class="material-icons">delete_outline</i>
+      </div>
+    </div>
+    <div class="card-panel recipe white row">
+      <img src="/img/dish.png" alt="recipe thumb">
+      <div class="recipe-details">
+        <div class="recipe-title">Edame Noodles</div>
+        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
+      </div>
+      <div class="recipe-delete">
+        <i class="material-icons">delete_outline</i>
+      </div>
+    </div>
+    <div class="card-panel recipe white row">
+      <img src="/img/dish.png" alt="recipe thumb">
+      <div class="recipe-details">
+        <div class="recipe-title">Edame Noodles</div>
+        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
+      </div>
+      <div class="recipe-delete">
+        <i class="material-icons">delete_outline</i>
+      </div>
+    </div>
+    <div class="card-panel recipe white row">
+      <img src="/img/dish.png" alt="recipe thumb">
+      <div class="recipe-details">
+        <div class="recipe-title">Edame Noodles</div>
+        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
+      </div>
+      <div class="recipe-delete">
+        <i class="material-icons">delete_outline</i>
+      </div>
+    </div>
+  </div>
+
+  <div class="center">
+    <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
+
+  <!-- add recipe side nav -->
+  <div id="side-form" class="sidenav side-form">
+    <form class="add-recipe container section">
+      <h6 >New Recipe</h6>
+      <div class="divider"></div>
+      <div class="input-field">
+        <input placeholder="e.g. Ninja soup" id="title" type="text" class="validate">
+        <label for="title">Recipe Title</label>
+      </div>
+      <div class="input-field">
+        <input placeholder="e.g. Tofu, mushroom, garlic" id="ingredients" type="text" class="validate">
+        <label for="ingredients">Ingredients</label>
+      </div>
+      <div class="input-field center">
+        <button class="btn-small">Add</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="/js/ui.js"></script>
+</body>
 </html>
