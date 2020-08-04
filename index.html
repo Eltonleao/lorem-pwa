@@ -22,7 +22,7 @@
     if('serviceWorker' in navigator){
       navigator.serviceWorker.register('./sw.js')
       .then(function(reg){
-        console.log("service worker firing! ;]", reg);
+        console.log("service worker is firing! ;]", reg);
       })
       .catch(function(err){
         console.log("service worker not working :(", err);
