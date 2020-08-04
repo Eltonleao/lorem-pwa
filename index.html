@@ -17,6 +17,19 @@
 </head>
 <body class="grey lighten-4">
 
+  <script>
+    console.log('cheking service worker');
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('./sw.js')
+      .then(function(reg){
+        console.log("service worker firing! ;]", reg);
+      })
+      .catch(function(err){
+        console.log("service worker not working :(", err);
+      })
+    }
+  </script>
+
   <!-- top nav -->
   <nav class="z-depth-0">
     <div class="nav-wrapper container">
@@ -109,16 +122,6 @@
 
   <script src="./js/ui.js"></script>
 
-  <script>
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('./sw.js')
-      .then(function(reg){
-        console.log("service worker firing! ;]", reg);
-      })
-      .catch(function(err){
-        console.log("service worker not working :(", err);
-      })
-    }
-  </script>
+
 </body>
 </html>
